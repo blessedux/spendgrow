@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ConnectWallet from "./ConnectWallet";
+import { Button } from "./ui/Button";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar({ userSession, userData, setUserData }) {
   return (
@@ -33,15 +35,18 @@ export default function Navbar({ userSession, userData, setUserData }) {
           </Link>
         </li>
       </ul>
-      {userData ? (
-        <ConnectWallet
-          userSession={userSession}
-          userData={userData}
-          setUserData={setUserData}
-        />
-      ) : (
-        ""
-      )}
+      <div className="flex items-center space-x-4">
+        <ThemeToggle />
+        {userData ? (
+          <ConnectWallet
+            userSession={userSession}
+            userData={userData}
+            setUserData={setUserData}
+          />
+        ) : (
+          ""
+        )}
+      </div>
     </nav>
   );
 }
