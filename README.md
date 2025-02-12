@@ -54,7 +54,7 @@ SpendGrow utilizes three primary smart contracts:
 
 1. Clone the repository:
    bash
-   git clone https://github.com/yourusername/spendgrow.git
+   git clone https://github.com/blessedux/spendgrow.git
    cd spendgrow
 
 2. Install dependencies:
